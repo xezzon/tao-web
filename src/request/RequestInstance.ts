@@ -3,11 +3,11 @@ import Interceptors from "./Interceptors"
 import RequestUrl from "./RequestUrl"
 
 interface InstanceConfig {
-  baseURL: string,
-  headers: object | Headers,
-  paramsSerializer: (params: object) => string,
-  transformRequest: (data: any, headers: object | Headers) => any,
-  transformResponse: (data: Response) => any,
+  baseURL?: string,
+  headers?: object | Headers,
+  paramsSerializer?: (params: object) => string,
+  transformRequest?: (data: any, headers: object | Headers) => any,
+  transformResponse?: (data: Response) => any,
 }
 
 type RequestConfig = InstanceConfig | RequestInfo
@@ -82,3 +82,4 @@ class RequestInstance {
 }
 
 export default RequestInstance
+export type { InstanceConfig }

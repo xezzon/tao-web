@@ -1,17 +1,20 @@
 {
   "name": "@xezzon/tao",
-  "version": "0.0.0",
+  "version": "0.2.0",
   "license": "LGPL-3.0",
   "type": "module",
-  "main": "index.cjs",
+  "main": "./dist/tao.umd.cjs",
+  "module": "./dist/tao.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "vite build && tsc",
     "preview": "vite preview"
   },
   "devDependencies": {
     "@types/node": "^18.14.0",
     "@types/qs": "^6.9.7",
+    "father": "^4.1.6",
     "typescript": "^4.9.3",
     "vite": "^4.1.0"
   },
